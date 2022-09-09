@@ -1,52 +1,50 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
-
-/* betty style doc for function main goes there */
+#include <stdlib.h>
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * main - main block
+ * Description: Write a program that prints all possible
+ * different combinations of two digits
+ * Return: 0
  */
 int main(void)
 {
-	int i, j, k, l;
+int c;
+int d;
+int e;
+int f = 0;
 
-	i = j = k = 48; l = 49;
-	while  ((i < 58))
+while (f < 10)
+{
+	e = 0;
+	while (e < 10)
 	{
-		putchar(i); putchar(j); putchar(32); putchar(k); putchar(l);
-		if ((i == 57) && (j == 56) && (k == 57) && (l == 57))
+		d = 0;
+		while (d < 10)
 		{
-			putchar('\n'); i++;
+			c = 0;
+			while (c < 10)
+			{
+				if (!(f == c && e == d))
+				{
+					putchar('0' + f);
+					putchar('0' + e);
+					putchar(' ');
+					putchar('0' + d);
+					putchar('0' + c);
+					if (!(f + e == 18 && c + d == 17 && d == 9))
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+				c++;
+			}
+			d++;
 		}
-		else
-		{
-			putchar(44); putchar(32);
-			if ((k == 57) && (l == 57))
-			{
-				if (j < 56)
-				{
-					l = ++j + 1; k = i;
-				}
-				else if (j == 56)
-				{
-					j++; k = i + 1; l = 48;
-				}
-				else if (j == 57)
-				{
-					j = 48; l = 49; k = ++i;
-				}
-			}
-			else if (l < 57)
-			{
-				l++;
-			}
-			else
-			{
-				l = 48; k++;
-			}
-		}
+		e++;
 	}
-	return (0);
+	f++;
+}
+putchar('\n');
+return (0);
 }
