@@ -1,21 +1,32 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 
+/* betty style doc for function main goes there */
 /**
  * main - Entry point
- * Return:0
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i, y;
-	for (i = 0; i < 10; i++)
+	int i;
+	char l;
+
+	i = 48;
+	while  (i < 58)
 	{
-		putchar (i + '0');
-	}
-	for (y = 'a'; y <= 'f'; y++)
-	{
-		putchar (y);
+		putchar(i);
+		i++;
 	}
 
-putchar('\n');
-return (0);
+	l = 'a';
+	while (l <= 'f')
+	{
+		putchar(l);
+		l++;
+	}
+	putchar('\n');
+
+	return (0);
 }
