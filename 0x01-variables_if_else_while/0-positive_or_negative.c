@@ -1,11 +1,13 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+
+/* betty style doc for function main goes there */
 /**
- * main - Determine if a number is positive, negative or zero.
+ * main - Entry point
  *
- * Return: always 0
-*/
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int n;
@@ -14,15 +16,16 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
 	{
-		printf("%d is positive\n", n);
+		printf("%i is positive\n", n);
 	}
 	else if (n == 0)
 	{
-		printf("%d is zero\n", n);
+		printf("%i is zero\n", n);
 	}
-	else
+	else if (n < 0)
 	{
-		printf("%d is negative\n", n);
+		printf("%i is negative\n", n);
 	}
+
 	return (0);
 }
