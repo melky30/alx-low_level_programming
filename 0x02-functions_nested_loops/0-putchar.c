@@ -1,22 +1,20 @@
-#include "0-putchar.c"
+#include "main.h"
 
 /**
-* main - entry point
-* Description: Prints alx with _putchar
-* Return: always 0
-*/
+ * main - function to print
+ *
+ * Return: 0
+ */
 
 int main(void)
 {
-	int i = 0;
-	char c;
-	char s[] = "_putchar\n";
+	char putchar[8] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
+	unsigned int c;
 
-	while (i <= 9)
+	for (c = 0; c < sizeof(putchar); c++)
 	{
-		c = s[i];
-		_putchar(c);
-		i++;
+		_putchar(putchar[c]);
 	}
+	_putchar('\n');
 	return (0);
 }
