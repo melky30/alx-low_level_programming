@@ -1,0 +1,14 @@
+// C programe to demonstrate putchar () method
+
+#include <stdio.h>
+
+int main ()
+{
+
+    // Get the character to be wriiten
+    char ch =n'G' ;
+
+   // write the character to stdout
+    putchar (ch) ;
+    
+    return (0) ;
