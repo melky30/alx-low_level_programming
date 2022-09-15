@@ -1,14 +1,13 @@
-// C programe to demonstrate putchar () method
+#include <unistd.h>
 
-#include <stdio.h>
-
-int main ()
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
 {
-
-    // Get the character to be wriiten
-    char ch =n'G' ;
-
-   // write the character to stdout
-    putchar (ch) ;
-    
-    return (0) ;
+	return (write(1, &c, 1));
+}
